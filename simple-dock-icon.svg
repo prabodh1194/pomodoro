@@ -1,0 +1,28 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Solid background -->
+  <rect x="10" y="10" width="100" height="100" rx="22" fill="#ff6b6b"/>
+  
+  <!-- Large tomato with timer -->
+  <g transform="translate(60, 60)">
+    <!-- Tomato body -->
+    <circle cx="0" cy="0" r="35" fill="#ff4444"/>
+    <circle cx="0" cy="0" r="30" fill="#ff6666"/>
+    
+    <!-- Timer markings -->
+    <g opacity="0.8">
+      <rect x="-1" y="-28" width="2" height="6" fill="white"/>
+      <rect x="-1" y="22" width="2" height="6" fill="white"/>
+      <rect x="-28" y="-1" width="6" height="2" fill="white"/>
+      <rect x="22" y="-1" width="6" height="2" fill="white"/>
+    </g>
+    
+    <!-- Clock hands -->
+    <line x1="0" y1="0" x2="0" y2="-15" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="10" y2="5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="3" fill="white"/>
+    
+    <!-- Green leaf -->
+    <ellipse cx="0" cy="-32" rx="12" ry="5" fill="#44aa44"/>
+    <rect x="-1" y="-35" width="2" height="5" fill="#44aa44"/>
+  </g>
+</svg>

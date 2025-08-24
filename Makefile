@@ -23,10 +23,15 @@ run:
 
 # Clean build artifacts
 clean:
-	@echo "Cleaning build artifacts..."
-	swift package clean
+	@echo "Cleaning Xcode build artifacts..."
+	@echo "Cleaning Xcode derived data..."
+	@rm -rf ~/Library/Developer/Xcode/DerivedData/PomodoroTimer-* 2>/dev/null || true
+	@echo "Cleaning local build artifacts..."
 	@if [ -d "$(BUILD_DIR)" ]; then rm -rf $(BUILD_DIR); fi
-	@echo "Clean completed"
+	@if [ -d "build/" ]; then rm -rf build/; fi
+	@echo "Cleaning temporary icon files..."
+	@rm -f dock-icon.svg simple-dock-icon.svg 2>/dev/null || true
+	@echo "Clean completed - restart Xcode for best results"
 
 # Install app to desktop
 install: build
