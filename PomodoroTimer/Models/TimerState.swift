@@ -1,6 +1,6 @@
 import Foundation
 
-enum TimerPhase: String, CaseIterable {
+enum TimerPhase: String, CaseIterable, Codable {
     case work = "Work"
     case shortBreak = "Short Break"
     case longBreak = "Long Break"
@@ -16,16 +16,28 @@ enum TimerPhase: String, CaseIterable {
     }
     
     var duration: TimeInterval {
-        switch self {
-        case .work: return 25 * 60
-        case .shortBreak: return 5 * 60
-        case .longBreak: return 15 * 60
-        case .stopped: return 0
+        let defaults = UserDefaults.standard
+        let developerMode = defaults.bool(forKey: "developerMode")
+        
+        if developerMode {
+            switch self {
+            case .work: return defaults.double(forKey: "workDuration") != 0 ? defaults.double(forKey: "workDuration") : 25 * 60
+            case .shortBreak: return defaults.double(forKey: "shortBreakDuration") != 0 ? defaults.double(forKey: "shortBreakDuration") : 5 * 60
+            case .longBreak: return defaults.double(forKey: "longBreakDuration") != 0 ? defaults.double(forKey: "longBreakDuration") : 15 * 60
+            case .stopped: return 0
+            }
+        } else {
+            switch self {
+            case .work: return 25 * 60
+            case .shortBreak: return 5 * 60
+            case .longBreak: return 15 * 60
+            case .stopped: return 0
+            }
         }
     }
 }
 
-struct TimerState {
+struct TimerState: Codable {
     var currentPhase: TimerPhase = .stopped
     var timeRemaining: TimeInterval = 0
     var totalTime: TimeInterval = 0
@@ -53,7 +65,9 @@ struct TimerState {
     }
     
     mutating func startBreak() {
-        let shouldTakeLongBreak = completedSessions > 0 && completedSessions % 4 == 0
+        let defaults = UserDefaults.standard
+        let sessionsUntilLongBreak = defaults.object(forKey: "sessionsUntilLongBreak") as? Int ?? 4
+        let shouldTakeLongBreak = completedSessions > 0 && completedSessions % sessionsUntilLongBreak == 0
         currentPhase = shouldTakeLongBreak ? .longBreak : .shortBreak
         timeRemaining = currentPhase.duration
         totalTime = currentPhase.duration

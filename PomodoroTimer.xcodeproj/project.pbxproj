@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1000001000000000000001 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002000000000000001 /* App.swift */; };
-		A1000003000000000000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000004000000000000001 /* ContentView.swift */; };
-		A1000005000000000000001 /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000006000000000000001 /* TimerState.swift */; };
-		A1000007000000000000001 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000008000000000000001 /* TimerViewModel.swift */; };
-		A1000009000000000000001 /* TimerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000010000000000000001 /* TimerData.swift */; };
-		A1000011000000000000001 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000012000000000000001 /* Extensions.swift */; };
-		A1000013000000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000014000000000000001 /* Assets.xcassets */; };
-		A1000015000000000000001 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000016000000000000001 /* Preview Assets.xcassets */; };
+		A1D40A001000000000001001 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D40A001000000000002001 /* App.swift */; };
+		A1D40A001000000000003001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D40A001000000000004001 /* ContentView.swift */; };
+		A1D40A001000000000005001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D40A001000000000006001 /* SettingsView.swift */; };
+		A1D40A001000000000007001 /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D40A001000000000008001 /* TimerState.swift */; };
+		A1D40A001000000000009001 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D40A001000000000010001 /* TimerViewModel.swift */; };
+		A1D40A001000000000011001 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D40A001000000000012001 /* Extensions.swift */; };
+		A1D40A001000000000013001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D40A001000000000014001 /* Assets.xcassets */; };
+		A1D40A001000000000015001 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D40A001000000000016001 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A1000017000000000000001 /* PomodoroTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1000002000000000000001 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		A1000004000000000000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A1000006000000000000001 /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
-		A1000008000000000000001 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
-		A1000010000000000000001 /* TimerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerData.swift; sourceTree = "<group>"; };
-		A1000012000000000000001 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		A1000014000000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A1000016000000000000001 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A1000018000000000000001 /* PomodoroTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomodoroTimer.entitlements; sourceTree = "<group>"; };
+		A1D40A001000000000002001 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		A1D40A001000000000004001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A1D40A001000000000006001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A1D40A001000000000008001 /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
+		A1D40A001000000000010001 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		A1D40A001000000000012001 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A1D40A001000000000014001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1D40A001000000000016001 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1D40A001000000000017001 /* PomodoroTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1D40A001000000000018001 /* PomodoroTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomodoroTimer.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A1000019000000000000001 /* Frameworks */ = {
+		A1D40A001000000000019001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,74 +41,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A1000020000000000000001 = {
+		A1D40A001000000000020001 = {
 			isa = PBXGroup;
 			children = (
-				A1000021000000000000001 /* PomodoroTimer */,
-				A1000022000000000000001 /* Shared */,
-				A1000023000000000000001 /* Products */,
+				A1D40A001000000000021001 /* PomodoroTimer */,
+				A1D40A001000000000022001 /* Shared */,
+				A1D40A001000000000023001 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A1000021000000000000001 /* PomodoroTimer */ = {
+		A1D40A001000000000021001 /* PomodoroTimer */ = {
 			isa = PBXGroup;
 			children = (
-				A1000002000000000000001 /* App.swift */,
-				A1000024000000000000001 /* Views */,
-				A1000025000000000000001 /* ViewModels */,
-				A1000026000000000000001 /* Models */,
-				A1000014000000000000001 /* Assets.xcassets */,
-				A1000018000000000000001 /* PomodoroTimer.entitlements */,
-				A1000027000000000000001 /* Preview Content */,
+				A1D40A001000000000002001 /* App.swift */,
+				A1D40A001000000000024001 /* Views */,
+				A1D40A001000000000025001 /* ViewModels */,
+				A1D40A001000000000026001 /* Models */,
+				A1D40A001000000000014001 /* Assets.xcassets */,
+				A1D40A001000000000018001 /* PomodoroTimer.entitlements */,
+				A1D40A001000000000027001 /* Preview Content */,
 			);
 			path = PomodoroTimer;
 			sourceTree = "<group>";
 		};
-		A1000022000000000000001 /* Shared */ = {
+		A1D40A001000000000022001 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A1000010000000000000001 /* TimerData.swift */,
-				A1000012000000000000001 /* Extensions.swift */,
+				A1D40A001000000000012001 /* Extensions.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		A1000023000000000000001 /* Products */ = {
+		A1D40A001000000000023001 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A1000017000000000000001 /* PomodoroTimer.app */,
+				A1D40A001000000000017001 /* PomodoroTimer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A1000024000000000000001 /* Views */ = {
+		A1D40A001000000000024001 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A1000004000000000000001 /* ContentView.swift */,
+				A1D40A001000000000004001 /* ContentView.swift */,
+				A1D40A001000000000006001 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		A1000025000000000000001 /* ViewModels */ = {
+		A1D40A001000000000025001 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A1000008000000000000001 /* TimerViewModel.swift */,
+				A1D40A001000000000010001 /* TimerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		A1000026000000000000001 /* Models */ = {
+		A1D40A001000000000026001 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A1000006000000000000001 /* TimerState.swift */,
+				A1D40A001000000000008001 /* TimerState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A1000027000000000000001 /* Preview Content */ = {
+		A1D40A001000000000027001 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				A1000016000000000000001 /* Preview Assets.xcassets */,
+				A1D40A001000000000016001 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -116,13 +116,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A1000028000000000000001 /* PomodoroTimer */ = {
+		A1D40A001000000000028001 /* PomodoroTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1000029000000000000001 /* Build configuration list for PBXNativeTarget "PomodoroTimer" */;
+			buildConfigurationList = A1D40A001000000000029001 /* Build configuration list for PBXNativeTarget "PomodoroTimer" */;
 			buildPhases = (
-				A1000030000000000000001 /* Sources */,
-				A1000019000000000000001 /* Frameworks */,
-				A1000031000000000000001 /* Resources */,
+				A1D40A001000000000030001 /* Sources */,
+				A1D40A001000000000019001 /* Frameworks */,
+				A1D40A001000000000031001 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -130,25 +130,25 @@
 			);
 			name = PomodoroTimer;
 			productName = PomodoroTimer;
-			productReference = A1000017000000000000001 /* PomodoroTimer.app */;
+			productReference = A1D40A001000000000017001 /* PomodoroTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A1000032000000000000001 /* Project object */ = {
+		A1D40A001000000000032001 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					A1000028000000000000001 = {
+					A1D40A001000000000028001 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = A1000033000000000000001 /* Build configuration list for PBXProject "PomodoroTimer" */;
+			buildConfigurationList = A1D40A001000000000033001 /* Build configuration list for PBXProject "PomodoroTimer" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -156,46 +156,46 @@
 				en,
 				Base,
 			);
-			mainGroup = A1000020000000000000001;
-			productRefGroup = A1000023000000000000001 /* Products */;
+			mainGroup = A1D40A001000000000020001;
+			productRefGroup = A1D40A001000000000023001 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A1000028000000000000001 /* PomodoroTimer */,
+				A1D40A001000000000028001 /* PomodoroTimer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A1000031000000000000001 /* Resources */ = {
+		A1D40A001000000000031001 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000015000000000000001 /* Preview Assets.xcassets in Resources */,
-				A1000013000000000000001 /* Assets.xcassets in Resources */,
+				A1D40A001000000000015001 /* Preview Assets.xcassets in Resources */,
+				A1D40A001000000000013001 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A1000030000000000000001 /* Sources */ = {
+		A1D40A001000000000030001 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000005000000000000001 /* TimerState.swift in Sources */,
-				A1000003000000000000001 /* ContentView.swift in Sources */,
-				A1000007000000000000001 /* TimerViewModel.swift in Sources */,
-				A1000009000000000000001 /* TimerData.swift in Sources */,
-				A1000011000000000000001 /* Extensions.swift in Sources */,
-				A1000001000000000000001 /* App.swift in Sources */,
+				A1D40A001000000000007001 /* TimerState.swift in Sources */,
+				A1D40A001000000000003001 /* ContentView.swift in Sources */,
+				A1D40A001000000000005001 /* SettingsView.swift in Sources */,
+				A1D40A001000000000009001 /* TimerViewModel.swift in Sources */,
+				A1D40A001000000000011001 /* Extensions.swift in Sources */,
+				A1D40A001000000000001001 /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A1000034000000000000001 /* Debug */ = {
+		A1D40A001000000000034001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -258,7 +258,7 @@
 			};
 			name = Debug;
 		};
-		A1000035000000000000001 /* Release */ = {
+		A1D40A001000000000035001 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -313,7 +313,7 @@
 			};
 			name = Release;
 		};
-		A1000036000000000000001 /* Debug */ = {
+		A1D40A001000000000036001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -323,6 +323,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PomodoroTimer/Preview Content\"";
+				DEVELOPMENT_TEAM = KN4793VWLV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -338,7 +339,7 @@
 			};
 			name = Debug;
 		};
-		A1000037000000000000001 /* Release */ = {
+		A1D40A001000000000037001 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -348,6 +349,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PomodoroTimer/Preview Content\"";
+				DEVELOPMENT_TEAM = KN4793VWLV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -366,25 +368,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1000033000000000000001 /* Build configuration list for PBXProject "PomodoroTimer" */ = {
+		A1D40A001000000000029001 /* Build configuration list for PBXNativeTarget "PomodoroTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1000034000000000000001 /* Debug */,
-				A1000035000000000000001 /* Release */,
+				A1D40A001000000000036001 /* Debug */,
+				A1D40A001000000000037001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1000029000000000000001 /* Build configuration list for PBXNativeTarget "PomodoroTimer" */ = {
+		A1D40A001000000000033001 /* Build configuration list for PBXProject "PomodoroTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1000036000000000000001 /* Debug */,
-				A1000037000000000000001 /* Release */,
+				A1D40A001000000000034001 /* Debug */,
+				A1D40A001000000000035001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A1000032000000000000001 /* Project object */;
+	rootObject = A1D40A001000000000032001 /* Project object */;
 }

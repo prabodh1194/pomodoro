@@ -5,7 +5,6 @@ class TimerViewModel: ObservableObject {
     @Published var timerState = TimerState()
     
     private var timer: Timer?
-    private let sharedDataManager = SharedDataManager.shared
     
     init() {
         loadPersistedState()
@@ -17,8 +16,9 @@ class TimerViewModel: ObservableObject {
     }
     
     private func loadPersistedState() {
-        if let persistedState = sharedDataManager.loadTimerData() {
-            timerState = persistedState
+        if let data = UserDefaults.standard.data(forKey: "TimerState"),
+           let state = try? JSONDecoder().decode(TimerState.self, from: data) {
+            timerState = state
             
             if timerState.isRunning {
                 let elapsed = Date().timeIntervalSince(timerState.lastUpdateTime)
@@ -108,6 +108,8 @@ class TimerViewModel: ObservableObject {
     }
     
     private func saveState() {
-        sharedDataManager.saveTimerData(timerState)
+        if let encoded = try? JSONEncoder().encode(timerState) {
+            UserDefaults.standard.set(encoded, forKey: "TimerState")
+        }
     }
 }

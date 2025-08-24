@@ -2,9 +2,20 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = TimerViewModel()
+    @State private var showingSettings = false
     
     var body: some View {
         VStack(spacing: 30) {
+            HStack {
+                Spacer()
+                Button(action: { showingSettings = true }) {
+                    Image(systemName: "gear")
+                        .font(.title2)
+                        .foregroundColor(.secondary)
+                }
+                .buttonStyle(.plain)
+            }
+            
             VStack(spacing: 10) {
                 HStack {
                     Text("🍅")
@@ -74,6 +85,9 @@ struct ContentView: View {
         }
         .padding(40)
         .frame(minWidth: 320, minHeight: 400)
+        .sheet(isPresented: $showingSettings) {
+            SettingsView(isPresented: $showingSettings)
+        }
     }
     
     private var phaseColor: Color {
