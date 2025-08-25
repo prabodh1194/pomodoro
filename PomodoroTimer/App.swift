@@ -7,6 +7,7 @@ struct PomodoroTimerApp: App {
             ContentView()
         }
         .windowStyle(.hiddenTitleBar)
-        .windowResizability(.contentSize)
+        .windowResizability(.contentMinSize)
+        .defaultSize(width: 480, height: 520)
     }
 }

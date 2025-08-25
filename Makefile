@@ -6,7 +6,7 @@ PROJECT_FILE = PomodoroTimer.xcodeproj
 SCHEME = PomodoroTimer
 BUILD_DIR = build
 CONFIGURATION = Release
-APP_PATH = $(BUILD_DIR)/$(CONFIGURATION)/$(APP_NAME).app
+APP_PATH = $(BUILD_DIR)/Build/Products/$(CONFIGURATION)/$(APP_NAME).app
 APPLICATIONS_PATH = /Applications
 DESKTOP_PATH = ~/Desktop
 
@@ -18,7 +18,7 @@ all: help
 # Build the app
 build:
 	@echo "Building $(APP_NAME)..."
-	xcodebuild -project $(PROJECT_FILE) -scheme $(SCHEME) -configuration $(CONFIGURATION) build
+	xcodebuild -project $(PROJECT_FILE) -scheme $(SCHEME) -configuration $(CONFIGURATION) -derivedDataPath $(BUILD_DIR) build
 
 # Run the app for testing
 run: build
@@ -41,25 +41,27 @@ clean:
 	@rm -f dock-icon.svg simple-dock-icon.svg 2>/dev/null || true
 	@echo "Clean completed - restart Xcode for best results"
 
-# Install app to Applications folder
+# Install app to Desktop
 install: build
-	@echo "Installing $(APP_NAME) to Applications folder..."
-	@if [ -d "$(APP_PATH)" ]; then \
-		sudo cp -R "$(APP_PATH)" $(APPLICATIONS_PATH)/ && echo "Successfully installed $(APP_NAME).app to Applications folder"; \
-	else \
-		echo "Error: App bundle not found at $(APP_PATH)"; \
-		echo "Contents of $(BUILD_DIR)/$(CONFIGURATION)/:"; \
-		ls -la "$(BUILD_DIR)/$(CONFIGURATION)/" 2>/dev/null || echo "Directory does not exist"; \
-		exit 1; \
-	fi
-
-# Install app to Desktop (alternative)
-install-desktop: build
 	@echo "Installing $(APP_NAME) to Desktop..."
 	@if [ -d "$(APP_PATH)" ]; then \
 		cp -R "$(APP_PATH)" $(DESKTOP_PATH)/ && echo "Successfully installed $(APP_NAME).app to Desktop"; \
 	else \
 		echo "Error: App bundle not found at $(APP_PATH)"; \
+		echo "Contents of $(BUILD_DIR)/Build/Products/$(CONFIGURATION)/:"; \
+		ls -la "$(BUILD_DIR)/Build/Products/$(CONFIGURATION)/" 2>/dev/null || echo "Directory does not exist"; \
+		exit 1; \
+	fi
+
+# Install app to Applications folder (alternative)
+install-apps: build
+	@echo "Installing $(APP_NAME) to Applications folder..."
+	@if [ -d "$(APP_PATH)" ]; then \
+		sudo cp -R "$(APP_PATH)" $(APPLICATIONS_PATH)/ && echo "Successfully installed $(APP_NAME).app to Applications folder"; \
+	else \
+		echo "Error: App bundle not found at $(APP_PATH)"; \
+		echo "Contents of $(BUILD_DIR)/Build/Products/$(CONFIGURATION)/:"; \
+		ls -la "$(BUILD_DIR)/Build/Products/$(CONFIGURATION)/" 2>/dev/null || echo "Directory does not exist"; \
 		exit 1; \
 	fi
 
@@ -79,8 +81,8 @@ debug:
 		ls -la "$(APP_PATH)"; \
 	else \
 		echo "App bundle exists: NO"; \
-		echo "Contents of $(BUILD_DIR)/$(CONFIGURATION)/:"; \
-		ls -la "$(BUILD_DIR)/$(CONFIGURATION)/" 2>/dev/null || echo "Directory does not exist"; \
+		echo "Contents of $(BUILD_DIR)/Build/Products/$(CONFIGURATION)/:"; \
+		ls -la "$(BUILD_DIR)/Build/Products/$(CONFIGURATION)/" 2>/dev/null || echo "Directory does not exist"; \
 	fi
 
 # Show help
@@ -88,9 +90,9 @@ help:
 	@echo "PomodoroTimer Build Commands:"
 	@echo "  make build           - Build the app using Xcode"
 	@echo "  make run             - Build and run the app for testing"
-	@echo "  make install         - Build and install app to Applications folder (requires sudo)"
-	@echo "  make install-desktop - Build and install app to Desktop"
-	@echo "  make deploy          - Build and install to Applications (alias for install)"
+	@echo "  make install         - Build and install app to Desktop"
+	@echo "  make install-apps    - Build and install app to Applications folder (requires sudo)"
+	@echo "  make deploy          - Build and install to Desktop (alias for install)"
 	@echo "  make clean           - Clean build artifacts"
 	@echo "  make debug           - Show resolved paths for troubleshooting"
 	@echo "  make help            - Show this help message"
